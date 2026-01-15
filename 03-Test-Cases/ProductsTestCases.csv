@@ -1,0 +1,19 @@
+Test cases for products page:
+
+TestCaseID,ScenarioID,Title,Preconditions,Steps,TestData,ExpectedResult,Priority,Type
+TC-PC-01,PC-01,Verify products are displayed on the products page after successful login,User has valid credentials,"Enter valid username; Enter valid password; Click Login","Username: standard_user | Password: secret_sauce",Products page is displayed with product list visible,High,Positive
+TC-PC-02,PC-02,Verify each product displays image title description and price,User is logged in and on products page,"Observe all listed products",-,Each product shows image title description and price,Medium,Positive
+TC-PC-03,PC-04,Verify user can sort products by name(A to Z),User is logged in and on products page,"Open sort dropdown; Select Name (A to Z); Observe product order",-,Products are sorted alphabetically ascending,Medium,Positive
+TC-PC-04,PC-04,Verify user can sort products by name(Z to A),User is logged in and on products page,"Open sort dropdown; Select Name (Z to A); Observe product order",-,Products are sorted alphabetically descending,Medium,Positive
+TC-PC-05,PC-03,Verify user can sort products by price(Low to High),User is logged in and on products page,"Open sort dropdown; Select Price (Low to High); Observe product order",-,Products are sorted by price ascending,Medium,Positive
+TC-PC-06,PC-03,Verify user can sort products by price(High to Low),User is logged in and on products page,"Open sort dropdown; Select Price (High to Low); Observe product order",-,Products are sorted by price descending,Medium,Positive
+TC-PC-07,PC-05,Verify user can add a product to the cart from the products page,User is on products page,"Click Add to cart for a product; Observe changes",-,Selected product is added to cart and button changes to Remove,High,Positive
+TC-PC-08,PC-06,Verify user can remove a product from the cart from the products page,User has a product in cart,"Click Remove button for selected product; Observe changes",-,Product is removed from cart and button changes to Add to cart,High,Positive
+TC-PC-09,PC-07,Verify cart badge updates when a product is added to cart,User is on products page,"Click Add to cart for a product; Observe cart badge",-,Cart badge count increases by one,Medium,Positive
+TC-PC-10,PC-07,Verify cart badge updates when a product is removed from the cart,User has a product in cart,"Click Remove for selected product; Observe cart badge",-,Cart badge count decreases by one,Medium,Positive
+TC-PC-11,PC-08,Verify user can open a product details page,User is on products page,"Click on a product title or image; Observe result",-,User is navigated to the selected product details page,Medium,Positive
+TC-PC-12,PC-09,Verify user can navigate back to products page from product details page,User is on product details page,"Click Back to products button; Observe result",-,User is navigated back to products page with state preserved,Medium,Positive
+TC-PC-13,PC-10,Verify cart items persist after page refresh,User has items in cart,"Add product(s) to cart; Refresh the page; Observe cart badge",-,Cart items remain after page refresh,Medium,Positive
+TC-PC-14,PC-11,Verify cart items persist after navigating away and back via About page,User has items in cart,"Open menu; Select About; Use browser back button; Observe cart badge",-,Cart items remain after navigating away and back,High,Positive
+TC-PC-15,PC-11,Verify cart items persist after navigating away and back via All Items menu,User has items in cart,"Open menu; Select All Items; Observe cart badge",-,Cart items remain after navigation,High,Positive
+TC-PC-16,PC-11,Verify cart is reset after using Reset App State option,User has items in cart,"Open menu; Select Reset App State; Observe cart badge and buttons",-,Cart is cleared and all product buttons reset to Add to cart,High,Positive

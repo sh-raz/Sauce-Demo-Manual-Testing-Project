@@ -1,0 +1,20 @@
+Test cases for checkout feature:
+
+TestCaseID,ScenarioID,Title,Preconditions,Steps,TestData,ExpectedResult,Priority,Type
+TC-CH-01,CH-01,Verify user can navigate to checkout page from cart,User has items in cart and is on cart page,"Click Checkout button",-,User is navigated to checkout information page,High,Positive
+TC-CH-02,CH-02,Verify checkout information page is displayed,User clicks Checkout from cart,"Observe the checkout page",-,Checkout information page with input fields is displayed,High,Positive
+TC-CH-03,CH-03,Verify user can enter checkout information,User is on checkout information page,"Enter first name; Enter last name; Enter postal code", "First name: John | Last name: Doe | Postal code: 12345",All entered information is accepted and visible,High,Positive
+TC-CH-04,CH-04,Verify error message is displayed when all mandatory fields are empty,User is on checkout information page,"Leave all fields empty; Click Continue",-,Error message is displayed indicating required fields,High,Negative
+TC-CH-05,CH-05,Verify user can continue to checkout overview page with valid information,User is on checkout information page,"Enter valid first name; Enter valid last name; Enter valid postal code; Click Continue","John | Doe | 12345",User is navigated to checkout overview page,High,Positive
+TC-CH-06,CH-06,Verify checkout overview page displays selected products correctly,User is on checkout overview page,"Observe product list",-,Selected products are displayed correctly in overview page,High,Positive
+TC-CH-07,CH-07,Verify checkout overview page displays product prices correctly,User is on checkout overview page,"Observe product prices",-,Each product price matches the price shown on products page,Medium,Positive
+TC-CH-08,CH-08,Verify checkout overview page displays tax correctly,User is on checkout overview page,"Observe tax value",-,Tax value is displayed correctly,Medium,Positive
+TC-CH-09,CH-09,Verify checkout overview page displays total price correctly,User is on checkout overview page,"Observe item total tax and total amount",-,Total price equals item total plus tax,High,Positive
+TC-CH-10,CH-10,Verify payment and shipping information is displayed on overview page,User is on checkout overview page,"Observe payment and shipping sections",-,Payment and shipping information is displayed,Medium,Positive
+TC-CH-11,CH-11,Verify user can cancel checkout and return to cart page,User is on checkout overview page,"Click Cancel button",-,User is navigated back to cart page,High,Positive
+TC-CH-12,CH-12,Verify user can complete checkout successfully,User is on checkout overview page,"Click Finish button",-,Checkout is completed successfully,High,Positive
+TC-CH-13,CH-13,Verify order confirmation page is displayed after successful checkout,User completes checkout,"Observe confirmation page",-,Order confirmation page is displayed,High,Positive
+TC-CH-14,CH-14,Verify thank you message is displayed after order completion,User is on order confirmation page,"Observe confirmation message",-,Thank you message is displayed confirming order completion,Medium,Positive
+TC-CH-15,CH-15,Verify user can navigate back to products page from confirmation page,User is on order confirmation page,"Click Back Home button",-,User is navigated back to products page,Medium,Positive
+TC-CH-16,CH-16,Verify cart badge is cleared after successful checkout,User has completed checkout,"Observe cart badge on products page",-,Cart badge shows zero items,High,Positive
+

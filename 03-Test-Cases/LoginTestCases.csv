@@ -1,0 +1,11 @@
+Test cases for login feature:
+
+TestCaseID,ScenarioID,Title,Preconditions,Steps,TestData,ExpectedResult,Priority,Type
+TC-L-01,LS-01,Verify user can log in with valid username and password,User is on the login page,"Enter valid username; Enter valid password; Click Login","Username: standard_user | Password: secret_sauce",User is redirected to the products page,High,Positive
+TC-L-02,LS-02,Verify user is redirected to products page after successful login,User has valid credentials,"Enter valid username; Enter valid password; Click Login","Username: standard_user | Password: secret_sauce",User is redirected to the products page,High,Positive
+TC-L-03,LS-03,Verify log in fails with invalid username and valid password,User is on the login page,"Enter invalid username; Enter valid password; Click Login","Username: wrong_user | Password: secret_sauce",Login fails and an appropriate error message is displayed,High,Negative
+TC-L-04,LS-04,Verify log in fails with valid username and invalid password,User is on the login page,"Enter valid username; Enter invalid password; Click Login","Username: standard_user | Password: wrong_sauce",Login fails and an appropriate error message is displayed,High,Negative
+TC-L-05,LS-05,Verify error message is displayed for invalid credentials,User is on the login page,"Enter invalid username; Enter invalid password; Click Login","Username: invalid_user | Password: wrong_sauce",Login fails and error message 'Epic sadface: Username and password do not match any user in this service' is displayed,High,Negative
+TC-L-07,LS-06,Verify log in fails when username field is empty,User is on the login page,"Leave username empty; Enter valid password; Click Login","Password: secret_sauce",Login fails and an appropriate error message is displayed,High,Negative
+TC-L-06,LS-07,Verify log in fails when password field is empty,User is on the login page,"Enter valid username; Leave password empty; Click Login","Username: standard_user",Login fails and an appropriate error message is displayed,High,Negative
+TC-L-09,LS-08,Verify locked out user cannot log in,User is on the login page,"Enter locked out username; Enter password; Click Login","Username: locked_out_user | Password: secret_sauce",Login fails and error message 'Epic sadface: Sorry, this user has been locked out.' is displayed,High,Negative
